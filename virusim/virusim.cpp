@@ -90,10 +90,15 @@ main(int argc, char *argv[]) {
                 population->propagateUntilOut(population->centralPerson(), prob_spread[ip], rand);
                 double infected = population->getPercentInfected();
                 #if defined(PARALLEL_TRIALS)
+                delete population;
                 #pragma omp critical
                 #endif
                 percent_infected[ip] += infected;
             }
+
+            #if defined(PARALLEL_PROBS) && !defined(PARALLEL_TRIALS)
+            delete population;
+            #endif
 
             // calcula média dos percentuais de árvores queimadas
             percent_infected[ip] /= n_trials;
