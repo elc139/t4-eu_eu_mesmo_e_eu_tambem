@@ -99,8 +99,14 @@ main(int argc, char *argv[]) {
             percent_infected[ip] /= n_trials;
 
             #if !defined(PARALLEL_PROBS)
-            // mostra resultado para esta probabilidade
-            printf("%lf, %lf\n", prob_spread[ip], percent_infected[ip]);
+            #if defined(PARALLEL_TRIALS)
+            if (!getenv("OUTPUT_ONLY_TIME")) {
+            #endif
+                // mostra resultado para esta probabilidade
+                printf("%lf, %lf\n", prob_spread[ip], percent_infected[ip]);
+            #if defined(PARALLEL_TRIALS)
+            }
+            #endif
             #endif
         }
 
