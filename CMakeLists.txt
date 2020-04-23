@@ -14,7 +14,6 @@ foreach(EXECUTABLE IN LISTS executables)
     add_executable(${EXECUTABLE} ${SOURCE_FILES})
 endforeach()
 
-#target_compile_definitions(virusim   PUBLIC ORIGINAL)
 target_compile_definitions(virusim_parallel_probs PUBLIC PARALLEL_PROBS)
 target_compile_definitions(virusim_parallel_trials PUBLIC PARALLEL_TRIALS)
 target_compile_definitions(virusim_parallel_probs_n_trials PUBLIC PARALLEL_PROBS PARALLEL_TRIALS)
