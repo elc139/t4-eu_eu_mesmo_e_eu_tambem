@@ -1,0 +1,11 @@
+# Cmake
+cmake-build-*/
+
+# IDE files
+.idea/
+
+# C++ bjetcs
+/virusim/*.o
+
+# Binaries
+output/
