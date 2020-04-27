@@ -3,6 +3,10 @@ project(Trabalho4 CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 
+set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/output)
+set(CMAKE_LIBRARY_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/output)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY ${PROJECT_SOURCE_DIR}/output)
+
 set(SOURCE_FILES
         virusim/virusim.cpp
         virusim/Random.cpp
