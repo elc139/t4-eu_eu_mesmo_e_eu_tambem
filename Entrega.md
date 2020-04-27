@@ -41,8 +41,8 @@ $ cmake .
 $ cmake --build . --config Release
 ```
 
-Após a execução os binários estarão na pasta `output/<BuildType>` aonde `<BuildType>` corresponde ao tipo de 
-build, por padrão esse valor é `Debug`
+Após a execução os binários estarão na pasta `output/<BuildType>` onde `<BuildType>` corresponde ao tipo de 
+build definido por `--config`, se esse valor é `Debug` por padrão se não for informado.
  
 ## Resultados
  
