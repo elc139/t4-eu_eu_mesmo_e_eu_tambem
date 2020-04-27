@@ -5,6 +5,7 @@ PROGRAM   = virusim
 PROGRAM1  = virusim_parallel_probs
 PROGRAM2  = virusim_parallel_trials
 PROGRAM3  = virusim_parallel_probs_n_trials
+PROGRAM4  = virusim_tasks
 OPTS      = -fopenmp
 SRCS      = virusim.cpp Random.cpp Population.cpp
 OBJS      = $(SRCS:.cpp=.o)
@@ -15,7 +16,7 @@ OUT       = ../output
 .cpp.o: 
 	$(CXX) -c $(CXXFLAGS) $<
 
-all: $(PROGRAM) $(PROGRAM1) $(PROGRAM2) $(PROGRAM3)
+all: $(PROGRAM) $(PROGRAM1) $(PROGRAM2) $(PROGRAM3) $(PROGRAM4)
 
 $(PROGRAM): $(OBJS)
 	mkdir -p $(OUT)
@@ -33,6 +34,10 @@ $(PROGRAM3): $(OBJS)
 	mkdir -p $(OUT)
 	$(CXX) $(OPTS) -o $(OUT)/$(PROGRAM3) $(SRCS) $(CXXFLAGS) $(LDFLAGS) -DPARALLEL_PROBS -DPARALLEL_TRIALS
 
+$(PROGRAM4): $(OBJS)
+	mkdir -p $(OUT)
+	$(CXX) $(OPTS) -o $(OUT)/$(PROGRAM3) $(SRCS) $(CXXFLAGS) $(LDFLAGS) -DTASKS
+
 clean:
-	/bin/rm -f $(OBJS) $(OUT)/$(PROGRAM) $(OUT)/$(PROGRAM1) $(OUT)/$(PROGRAM2) $(OUT)/$(PROGRAM3)
+	/bin/rm -f $(OBJS) $(OUT)/$(PROGRAM) $(OUT)/$(PROGRAM1) $(OUT)/$(PROGRAM2) $(OUT)/$(PROGRAM3) $(OUT)/$(PROGRAM4)
 	/bin/rmdir $(OUT)

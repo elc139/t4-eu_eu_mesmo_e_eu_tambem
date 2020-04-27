@@ -8,7 +8,7 @@ set(SOURCE_FILES
         virusim/Random.cpp
         virusim/Population.cpp)
 
-set(executables virusim virusim_parallel_probs virusim_parallel_trials virusim_parallel_probs_n_trials)
+set(executables virusim virusim_parallel_probs virusim_parallel_trials virusim_parallel_probs_n_trials virusim_tasks)
 
 foreach(EXECUTABLE IN LISTS executables)
     add_executable(${EXECUTABLE} ${SOURCE_FILES})
@@ -17,6 +17,7 @@ endforeach()
 target_compile_definitions(virusim_parallel_probs PUBLIC PARALLEL_PROBS)
 target_compile_definitions(virusim_parallel_trials PUBLIC PARALLEL_TRIALS)
 target_compile_definitions(virusim_parallel_probs_n_trials PUBLIC PARALLEL_PROBS PARALLEL_TRIALS)
+target_compile_definitions(virusim_tasks PUBLIC TASKS)
 
 if (WIN32)
     foreach(EXECUTABLE IN LISTS executables)

@@ -8,11 +8,15 @@ export OUTPUT_ONLY_TIME=1;
 _probs_exec=./cmake-build-mingw/virusim_parallel_probs.exe;
 # shellcheck disable=SC2034
 _trials_exec=./cmake-build-mingw/virusim_parallel_trials.exe;
+# shellcheck disable=SC2034
+_tasks_exec=./cmake-build-mingw/virusim_tasks.exe;
 
 # shellcheck disable=SC2034
 _probs_name="probabilities";
 # shellcheck disable=SC2034
 _trials_name="trials";
+# shellcheck disable=SC2034
+_tasks_name="tasks";
 
 # shellcheck disable=SC2034
 _small_size=30;
@@ -43,7 +47,7 @@ _big_sample=1;
 
 printf "# Results tables\n\n";
 
-for approach in 'probs' 'trials'; do
+for approach in 'probs' 'trials' 'tasks'; do
 
   _exec=_${approach}_exec;
   _name=_${approach}_name;
