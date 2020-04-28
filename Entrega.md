@@ -14,9 +14,9 @@ para gerar binários com comportamentos distintos (veja [Makefile] e/ou [CMakeLi
 É possível gerar 4 executáveis com comportamentos distintos:
 
  * **virusim**: Comportamento original inalterado;
- * **virusim_parallel_probs**: Paralelizando o loop de probabilidades
- * **virusim_parallel_trials**: Paralelizando o loop de amostragens
- * **virusim_parallel_probs_n_trials**: Paralelizando ambos os loops de probabilidades e amostragens
+ * **virusim_parallel_probs**: Paralelizando o loop de probabilidades;
+ * **virusim_parallel_trials**: Paralelizando o loop de amostragens;
+ * **virusim_parallel_probs_n_trials**: Paralelizando ambos os loops de probabilidades e amostragens;
  
 ### Compilando
 
