@@ -45,10 +45,16 @@ Após a execução os binários estarão na pasta `output/<BuildType>` onde `<Bu
 build definido por `--config`, se esse valor é `Debug` por padrão se não for informado.
  
 ## Resultados
- 
+
+### Tabelas
+
 Uma tabela com os tempos, aceleração e eficiencia para diversas configurações de numero de threads 
 e tamanhos de problemas para _virusim_parallel_probs_ e _virusim_parallel_probs_ pode ser encontrado
 em [Results.md]. 
+
+### Slides
+
+Há [slides] explicando as estratégias adotadas e discutindo os resultados encontrados nas tabelas.
 
 ## Referências
 
@@ -59,3 +65,4 @@ em [Results.md].
 [Makefile]: virusim/Makefile
 [CMakeLists.txt]: CMakeLists.txt
 [Results.md]: RESULTS.md
+[slides]: Slides.pptx
